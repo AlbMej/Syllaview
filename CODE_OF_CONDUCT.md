@@ -1,7 +1,7 @@
-# [ScheduleThis] Code of Conduct
-In the interest of fostering an open and welcoming environment, [ScheduleThis] pledges to be an inclusive and harassment-free experience for  all, regardless of age, body size, disability, ethnicity, gender identity and expression, level of experience, educational background, socio-economic status, nationality, personal appearance, race, religion, or sexual identity and orientation.
+# ScheduleThis Code of Conduct
+In the interest of fostering an open and welcoming environment, ScheduleThis pledges to be an inclusive and harassment-free experience for  all, regardless of age, body size, disability, ethnicity, gender identity and expression, level of experience, educational background, socio-economic status, nationality, personal appearance, race, religion, or sexual identity and orientation.
 
-This Code of Conduct applies to all [ScheduleThis]-affiliated activity online and offline.
+This Code of Conduct applies to all ScheduleThis-affiliated activity online and offline.
 
 ## Summary
 * [Be respectful and inclusive](#be-respectful-and-inclusive).
@@ -10,7 +10,7 @@ This Code of Conduct applies to all [ScheduleThis]-affiliated activity online an
 * Do not engage in any [unacceptable behaviors](#unacceptable-behaviors).
 * At any point, you may [report CoC violations](#reporting-incidents) to our coordinators and faculty advisors.
 * [Project maintainers](#project-maintainer-responsibilities) should be mindful of the Code of Conduct.
-* Summarize any [project-specific guidelines](#[ScheduleThis]-specific-guidelines) (if any) here.
+* Summarize any [project-specific guidelines](#ScheduleThis-specific-guidelines) (if any) here.
 
 ## Guidelines
 ### Be respectful and inclusive
@@ -59,7 +59,7 @@ If you are uncomfortable reporting to the coordinators for any reason, you may r
 ## Project Maintainer Responsibilities
 Project maintainers have the right and responsibility to remove, edit, or reject comments, commits, code, wiki edits, issues, and other contributions that are not aligned to this Code of Conduct. In the case of contributors external to RPI and/or RCOS, temporary or permanent bans may occur. RPI-specific policies are outlined in the RCOS [Bylaws](https://rcos.github.io/rcos-handbook/#/community/bylaws).
 
-## [ScheduleThis]-Specific Guidelines
+## ScheduleThis-Specific Guidelines
 Any additional ground rules for the ScheduleThis team to follow will be added here. 
 
 Ground rules regarding technical or project management aspects of ScheduleThis will go in the Contributing Guidelines.
