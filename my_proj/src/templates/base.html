@@ -1,138 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
-    {% load staticfiles %}
-    {% load thumbnail %}
-    
+  {% load staticfiles %}
+  {% load thumbnail %}
   <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="{% block description %}{% endblock description %}">
-    <meta name="author" content="JoJo">
-    <link rel="shortcut icon" href="{% static 'site/ico/favicon.ico' %}">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="">
 
-    <title>{% block title %}{% include "_brandname.html" %} :: {% endblock %}</title>
+    <title>{% block title %} {% endblock %}</title>
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/jumbotron/">
 
     <!-- Bootstrap core CSS -->
     <link href="{% static 'bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
 
-    <!-- Custom styles for this site -->
+    <!-- Custom styles for this template -->
     {% block styles %}
-    <link href="{% static 'site/css/main.css' %}" rel="stylesheet">
+    <link href="carousel.css" rel="stylesheet">
     {% endblock styles %}
-
-    <!-- Custom tags for the head tag -->
+    
     {% block extrahead %}{% endblock extrahead %}
-
-    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
-    <![endif]-->
   </head>
 
   <body>
-
-    {% block navbar %}
-    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="{% url 'home' %}">
-            {% block navbar-brand %}
-              <img src="{% static 'site/img/logo.png' %}" alt="logo">
-              {% include "_brandname.html" %}
-            {% endblock %}
-          </a>
-        </div>
-        {% block navbar-menu %}
-        <div class="collapse navbar-collapse">
-          <ul class="nav navbar-nav">
-            {% block navbar-left %}{% endblock %}
-          </ul>
-          <ul class="nav navbar-nav navbar-right">
-            {% block navbar-right %}
-              {% if user.is_authenticated %}
-                {% if user.is_staff %}
-                <li><a href="{% url 'admin:index' %}">Admin</a></li>
-                {% endif %}
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle profile-menu" data-toggle="dropdown">
-			<img src="{% thumbnail user.profile.picture|default:'default_profile.png' 30x30 crop %}" alt="" />
-			{{ user.get_full_name|truncatechars:20 }}
-			<span class="caret"></span>
-		    </a>
-		    
-                  <ul class="dropdown-menu" role="menu">
-                    <li><a href="{% url 'profiles:show_self' %}">Profile</a></li>
-                    <li><a href="{% url 'accounts:logout' %}">Logout</a></li>
-                  </ul>
-                </li>
-              {% endif %}
-            {% endblock %}
-          </ul>
-        </div><!--/.nav-collapse -->
-        {% endblock %}
-    </div>
-    {% endblock navbar %}
-
-    {% block messages %}
-      {% if messages %}
-        {% for message in messages %}
-          <div class="alert alert-{{ message.tags }}">  <!-- singular -->
-            <a class="close" data-dismiss="alert">×</a>
-            {{ message|safe }}
-          </div>
-        {% endfor %}
-      {% endif %}
-    {% endblock %}
-
-    {% block splash %}
-    {% endblock splash %}
-    
-    {% block container %}
     <div class="container">
-
-      <div class="starter-template">
-        <h1>New Project</h1>
-        <p class="lead">Use this document as a way to quickly start any new project.<br> All you get is this text and a mostly barebones HTML document.</p>
+        <div class="header clearfix">
+          <nav id="MainNav">
+            <ul class="nav nav-pills float-right">
+              <li class="nav-item">
+                <a class="nav-link" href="#">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Tour</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Blog</a>
+              </li>
+            </ul>
+          </nav>
+          <h3 class="text-muted">ScheduleThis</h3>
+          </div>
       </div>
+    </nav>
 
-    </div><!-- /.container -->
-    {% endblock container %}
-
-    <!-- Site footer -->
-    {% block footer %}
-      <!-- Some social button for contact will do -->
-      <a id="contact"></a>
+    <!-- Main jumbotron for a primary marketing message or call to action -->
+    <div class="jumbotron">
       <div class="container">
-            <div class="footer">
-        <div class="row">
-          <div class="col-lg-6">
-              <p>&copy; Company {% now 'Y' %}</p>
-          </div>
-          <div class="col-lg-6 text-right">
-            Connect with us on
-            <a href="#"><i class="fa fa-facebook"></i> Facebook</a> or
-            <a href="#"><i class="fa fa-twitter"></i> Twitter</a>
-          </div>
-        </div>
-            </div>
+        <h1 class="display-3">Hello, world!</h1>
+        <p>This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
       </div>
-    {% endblock %}
+      <p><a class="btn btn-secondary" href="#" role="button">Get Started</a></p>
+    </div>
 
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
-    <script src="{% static 'bootstrap/js/bootstrap.min.js' %}"></script>
-    {% block scripts %}
-    {% endblock scripts %}
+    <div class="container">
+      <!-- Example row of columns -->
+      <div class="row">
+        <div class="col">
+          <h2>Upload Document</h2>
+          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+        </div>
+        <div class="col">
+            <div class="text-center">
+                <img class="img-responsive" src="pictures/arrow-graphics-7.png" alt="ARROW RIGHT" width="150">
+            </div>
+         </div>
+        <div class="col">
+          <h2>We extract information</h2>
+          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+       </div>
+       <div class="col">
+            <div class="text-center">
+                <img class="img-responsive" src="pictures/arrow-graphics-7.png" alt="ARROW RIGHT" width="150">
+            </div>
+        </div>
+        <div class="col">
+          <h2>We email you ...</h2>
+          <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+        </div>
+      </div>
+
+    </div> <!-- /container -->
+    <div class="jumbotron">
+        <div class="file-upload-wrapper">
+            <input type="file" id="input-file-now-custom-1" class="file-upload" data-default-file="https://mdbootstrap.com/img/Photos/Others/images/89.jpg" />
+        </div>
+    </div>
+    <footer>
+            <p>&copy; RCOS</p>
+    </footer>
   </body>
+  
 </html>
-
 
