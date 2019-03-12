@@ -1,4 +1,7 @@
-We are conducting quantitative research to determine the interest level in our product. We want to know how many of our users currently have a calendar/reminder app or similar product.
+# Quantitative Research Questions
+
+We are conducting quantitative research to determine the interest level in our product. We want to know how many of our users currently
+have a calendar/reminder app or similar product.
 
 1. How many classes do you currently take?
 2. How many times have you thrown out a syllabus?
