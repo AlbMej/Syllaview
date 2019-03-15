@@ -1,16 +1,16 @@
-# ScheduleThis Code of Conduct
-In the interest of fostering an open and welcoming environment, ScheduleThis pledges to be an inclusive and harassment-free experience for  all, regardless of age, body size, disability, ethnicity, gender identity and expression, level of experience, educational background, socio-economic status, nationality, personal appearance, race, religion, or sexual identity and orientation.
+# Syllaview Code of Conduct
+In the interest of fostering an open and welcoming environment, Syllaview pledges to be an inclusive and harassment-free experience for  all, regardless of age, body size, disability, ethnicity, gender identity and expression, level of experience, educational background, socio-economic status, nationality, personal appearance, race, religion, or sexual identity and orientation.
 
-This Code of Conduct applies to all ScheduleThis-affiliated activity online and offline.
+This Code of Conduct applies to all Syllaview-affiliated activity online and offline.
 
 ## Summary
 * [Be respectful and inclusive](#be-respectful-and-inclusive).
 * [Give and be welcoming to constructive feedback](#give-and-be-welcoming-to-constructive-feedback).
-* [Focus on what is best for the [ScheduleThis] community](#focus-on-what-is-best-for-the-community).
+* [Focus on what is best for the [Syllaview] community](#focus-on-what-is-best-for-the-community).
 * Do not engage in any [unacceptable behaviors](#unacceptable-behaviors).
 * At any point, you may [report CoC violations](#reporting-incidents) to our coordinators and faculty advisors.
 * [Project maintainers](#project-maintainer-responsibilities) should be mindful of the Code of Conduct.
-* Summarize any [project-specific guidelines](#ScheduleThis-specific-guidelines) (if any) here.
+* Summarize any [project-specific guidelines](#Syllaview-specific-guidelines) (if any) here.
 
 ## Guidelines
 ### Be respectful and inclusive
