@@ -1,0 +1,25 @@
+# Quantitative Research Questions
+
+We are conducting quantitative research to determine the interest level in our product. We want to know how many of our users currently
+have a calendar/reminder app or similar product.
+
+1. How many classes do you currently take?
+    4
+2. How many times have you thrown out a syllabus?
+    All the time
+3. How many times have you misplaced your class syllabus?
+    I've thrown them out usually
+4. Do you currently have calendar apps on your phone/desktop/tablet?
+    Yes I have google calendar on all devices
+5. Do you currently own a paper planner?
+    Nah
+6. How many times a week do you use the calendar app?
+    5 times a week
+7. How many times a week do you use your paper planner?
+    I do not
+8. Have you ever misplaced your paper planner?
+    I do not have one
+9. Have you ever forgotten to check you paper planner? 
+    I do not
+10. What are your (or your classmates) biggest challenges with paper syllabuses?
+    They are very easy to lose and very easy to have messed up, not so easy to shar either
