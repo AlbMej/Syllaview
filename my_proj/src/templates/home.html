@@ -1,67 +1,105 @@
-{% extends "base.html" %}
+<!DOCTYPE html>
+<html lang="en">
+  {% load staticfiles %}
+  {% load thumbnail %}
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="">
 
-{% load staticfiles %}
-{% load crispy_forms_tags %}
+    <title>{% block title %} {% endblock %}</title>
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/jumbotron/">
 
-{% block title %}{{ block.super }}Home{% endblock %}
+    <!-- Bootstrap core CSS -->
+    <link href="{% static 'bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
 
-{% block navbar-left %}
-  {% include "_navbar.html" with active_link="home" %}
-{% endblock %}
+    <!-- Custom styles for this template -->
+    {% block styles %}
+    <link href="{% static 'site/css/main.css' %}" rel="stylesheet">
+    {% endblock styles %}
+    
+    {% block extrahead %}{% endblock extrahead %}
+  </head>
 
-{% block navbar-right %}
-  {% if not user.is_authenticated %}
-<a class="btn btn-default" href="{% url 'accounts:login' %}" role="button">Log in</a>
-<a class="btn btn-primary" href="{% url 'accounts:signup' %}" role="button">Sign up</a>
-  {% else %}
-    {{ block.super }}
-  {% endif %}
-{% endblock %}
-
-{% block splash %}
-  <div class="jumbotron jumbotron-carousel corporate-jumbo">
+  
+  <body>
     <div class="container">
-      <div class="row">
-        <div class="col-md-8 col-sm-8">
-          <h1>{% include "_brandname.html" %}</h1>
-          <p>A service to help you create and manage a schedule</p>
-	  <a class="btn btn-primary" href="{% url 'accounts:signup' %}" role="button">Sign up for Free!</a>
-        </div>
-        <div class="col-md-4 col-sm-4">
-
-        </div>
+        <div class="header clearfix">
+            <nav class="navbar navbar-inverse navbar-fixed-top">
+                <div class="container-fluid">
+                  <div class="navbar-header">
+                    <a class="navbar-brand" href="#">Syllaview</a>
+                  </div>
+                  <div class="nav navbar-nav">
+                    <li class="active"><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Tour</a></li>
+                  </div>
+                </div>
+              </nav>
+          </div>
+      </div>
+    <!-- Main jumbotron for a primary marketing message or call to action -->
+    {% block splash %}
+    <div class="jumbotron">
+      <div class="container">
+        <h1 class="display-2">Forgetting to study for an exam sucks! Syllaview is here to help!</h1>
+        <p>School can end up being overwhelming, but it doesn't have to be. Syllaview lets you keep 
+          track of everything with the press of a single button! Everything is kept in one place so
+          you can keep a peace of mind!
+        </p>
+      <button type="button" class="btn btn-primary btn-md">Get Started</button>
       </div>
     </div>
-  </div>
-{% endblock splash %}
+    {% endblock splash %}
+    {% block container %}
+    <div class="container">
+      <h1>How it works</h1>
+      <!-- Example row of columns -->
+      <div class="row">
+        <div class="col-lg-4">
+            <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+            width="100" height="100"
+            viewBox="0 0 192 192"
+            style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,192v-192h192v192z" fill="none"></path><g fill="#e74c3c"><path d="M44.8,12.8c-7.072,0 -12.8,5.728 -12.8,12.8v140.8c0,7.072 5.728,12.8 12.8,12.8h54.5125c-6.1312,-9.152 -9.7125,-20.1536 -9.7125,-32c0,-31.8144 25.7856,-57.6 57.6,-57.6c4.4032,0 8.6784,0.5342 12.8,1.475v-30.275c0,-1.696 -0.6718,-3.3218 -1.875,-4.525l-41.6,-41.6c-1.2032,-1.2032 -2.829,-1.875 -4.525,-1.875zM108.8,24.9875l39.0125,39.0125h-32.6125c-3.5328,0 -6.4,-2.8672 -6.4,-6.4zM147.2,102.4c-24.7424,0 -44.8,20.0576 -44.8,44.8c0,24.7424 20.0576,44.8 44.8,44.8c24.7424,0 44.8,-20.0576 44.8,-44.8c0,-24.7424 -20.0576,-44.8 -44.8,-44.8zM147.2,121.6c3.5328,0 6.4,2.8608 6.4,6.4v12.8h12.8c3.5328,0 6.4,2.8608 6.4,6.4c0,3.5392 -2.8672,6.4 -6.4,6.4h-12.8v12.8c0,3.5392 -2.8672,6.4 -6.4,6.4c-3.5328,0 -6.4,-2.8608 -6.4,-6.4v-12.8h-12.8c-3.5328,0 -6.4,-2.8608 -6.4,-6.4c0,-3.5392 2.8672,-6.4 6.4,-6.4h12.8v-12.8c0,-3.5392 2.8672,-6.4 6.4,-6.4z"></path></g></g></svg>
+          <h3>Upload Document</h3>
+          <p>Syllaview is compatible with all major PDF editors.</p>
+        </div>
 
-{% block container %}
-<!-- Benefits of the Django application -->
-<a id="about"></a>
+        <div class="col-lg-4">
+            <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+            width="100" height="100"
+            viewBox="0 0 192 192"
+            style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,192v-192h192v192z" fill="none"></path><g fill="#e74c3c"><path d="M96,12.8l-32,32h64zM48.75,25.6c-4.8896,0 -9.274,2.7166 -11.45,7.075l-11.7,23.4125v20.7125v76.8c0,7.072 5.728,12.8 12.8,12.8h115.2c7.072,0 12.8,-5.728 12.8,-12.8v-76.8v-19.2v-1.5125l-11.7,-23.4125c-2.176,-4.3648 -6.5604,-7.075 -11.45,-7.075h-16.35l12.8,12.8h3.55l9.6,19.2h-113.7l9.6,-19.2h3.55l12.8,-12.8zM76.8,70.4h38.4c3.5328,0 6.4,2.8672 6.4,6.4c0,3.5328 -2.8672,6.4 -6.4,6.4h-38.4c-3.5328,0 -6.4,-2.8672 -6.4,-6.4c0,-3.5328 2.8672,-6.4 6.4,-6.4z"></path></g></g></svg>
+          <h3>We extract the data</h3>
+          <p>We scan your documents for dates and annotations.</p>
+       </div>
 
-<div class="container">
-  <div class="row">
-    <div class="col-lg-4">
-      <h2>Our Purpose</h2>
-      <p>Temp info until we decide what to do </p>
-      <p><a class="btn btn-primary" href="#" role="button">View details &raquo;</a></p>
+        <div class="col-lg-4">
+            <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+              width="100" height="100"
+              viewBox="0 0 192 192"
+              style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,192v-192h192v192z" fill="none"></path><g fill="#e74c3c"><path d="M7.68,7.68v130.56h11.52v-119.04h122.88v-11.52zM26.88,26.88v130.56h11.52v-119.04h122.88v-11.52zM46.08,46.08v130.56h108.84c5.47985,5.42637 9.34166,9.2175 9.435,9.2175l1.1475,1.1475c6.144,6.144 16.131,6.912 22.275,0c5.76,-6.144 5.3775,-15.357 -0.3825,-21.885l-1.155,-1.155l-6.1425,-6.1425v-111.7425zM105.2175,104.835l15.33,4.215l-10.8525,11.1zM126.0075,114.45l53.5125,53.1675l-11.325,11.325l-0.195,0.195l-53.04,-53.385z"></path></g></g></svg>
+          <h3>Customize your calendar</h3>
+          <p>We create a customizable calendar with your extracted PDF data.</p>
+        </div>
+      </div>
+
+    </div> <!-- /container -->
+    {% endblock container %}
+    <div class="jumbotron">
+        <div class="file-upload-wrapper">
+            <input type="file" id="input-file-now-custom-1" class="file-upload" data-default-file="https://mdbootstrap.com/img/Photos/Others/images/89.jpg" />
+        </div>
     </div>
-    <div class="col-lg-4">
-      <h2>Why use us?</h2>
-      <p>Temp info until we decide what to do</p>
-      <p><a class="btn btn-primary" href="#" role="button">View details &raquo;</a></p>
-    </div>
-    <div class="col-lg-4">
-      <h2>Recent News</h2>
-      <p>Temptemptemptemptemptemptemptemptemp</p>
-      <p><a class="btn btn-primary" href="#" role="button">View details &raquo;</a></p>
-    </div>
-  </div>
-</div>
-
-{% endblock container %}
-
-{% block scripts %}
-<script src="{% static 'site/js/site.js' %}"></script>
-{% endblock scripts %}
+    {% block footer %}
+    <footer>
+            <p>&copy; RCOS</p>
+    </footer>
+    {% endblock %}
+  </body>
+  
+</html>
 
