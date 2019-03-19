@@ -8,17 +8,51 @@ body {
   /* Main marketing message and sign up button */
   .jumbotron {
     text-align: left;
+    margin-bottom:0;
   }
-  
+
+  #Home.jumbotron{
+    background-image: url("../img/ManStudying.jpg");
+    background-size: cover;
+    color: black;
+    margin-bottom:0;  
+  }
+
+  #HowItWorks.jumbotron {
+    text-align: center;
+    align-content: center;
+    margin-bottom:0;
+  }
+
+  #Popular.jumbotron {
+    text-align: center;
+    align-content: center;
+    background-color: red;
+    margin-bottom:0;
+  }
+
+
+  #Account.jumbotron {
+    text-align: center;
+    align-content: center;
+    background-color: rgb(240, 239, 239);
+    margin-bottom:0;
+  }
+
   .header-clearfix {
     color: white;
     text-emphasis-color: red;
     align-content: right;
   }
   
+  #features.col-lg-2{
+    align-content: center
+  }
+
   .nav-navbar-nav{
     text-align: right;
   }
+
 
   .button{
       color: rgb(255, 31, 31);

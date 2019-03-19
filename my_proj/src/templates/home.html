@@ -43,20 +43,36 @@
       </div>
     <!-- Main jumbotron for a primary marketing message or call to action -->
     {% block splash %}
-    <div class="jumbotron">
-      <div class="container">
-        <h1 class="display-2">Forgetting to study for an exam sucks! Syllaview is here to help!</h1>
-        <p>School can end up being overwhelming, but it doesn't have to be. Syllaview lets you keep 
-          track of everything with the press of a single button! Everything is kept in one place so
-          you can keep a peace of mind!
-        </p>
-      <button type="button" class="btn btn-primary btn-md">Get Started</button>
+    <div id="Home" class="jumbotron">
+      <div class="row">
+        <div class="container">
+          <h1 class="display-2">Forgetting to study for an exam sucks! Syllaview is here to help!</h1>
+          <p>School can end up being overwhelming, but it doesn't have to be. Syllaview lets you keep 
+            track of everything with the press of a single button! Everything is kept in one place so
+            you can keep a peace of mind!
+          </p><br><br>
+        <button type="button" class="btn btn-primary btn-md">Get Started</button>
+        </div>
+        <br><br><br><br>
       </div>
     </div>
     {% endblock splash %}
+    {% block jumbo %}
+    <div class="jumbotron">
+      <div class="row">
+        <div class="col-lg-6">
+            <img src="../static/site/img/calendar_ex.PNG" alt = "Send Help" style="width:450px;height:300px;">
+        </div>
+        <div class="col-lg-6">
+          <h2>At a glance</h2>
+          <p>Pls help me make this website</p>
+        </div>
+      </div>
+    </div>
+    {% endblock jumbo %}
     {% block container %}
-    <div class="container">
-      <h1>How it works</h1>
+    <div id="HowItWorks" class="jumbotron">
+      <h1 align="center">How it works</h1> <br><br>
       <!-- Example row of columns -->
       <div class="row">
         <div class="col-lg-4">
@@ -86,14 +102,53 @@
           <p>We create a customizable calendar with your extracted PDF data.</p>
         </div>
       </div>
-
     </div> <!-- /container -->
     {% endblock container %}
-    <div class="jumbotron">
+    <div id="Popular" class="jumbotron">
+      <h1 align="center">Popular Features</h1><br><br>
+        <div class="row">
+          <div id="features" class="col-lg-2">
+              <img src="https://img.icons8.com/ios-glyphs/120/000000/calendar-19.png">
+          </div>
+          <div class="col-lg-4">
+            <h3>Multi-Calendars</h3>
+            <p>You recieve a customizable calendar for each syllabus you upload! Edit, delete, add tasks, and color-code subjects!</p>
+          </div>
+          <div id="features" class="col-lg-2">
+            <img src="https://img.icons8.com/ios-glyphs/120/000000/alarm-clock.png">
+          </div>
+          <div class="col-lg-4">
+            <h3>Reminders</h3>
+            <p>Get notified about tasks and upcoming exams via text and email.</p>
+          </div>
+        </div>
+        <div class="row">
+            <div id="features" class="col-lg-2">
+              <img src="https://img.icons8.com/ios-glyphs/120/000000/synchronize.png">
+            </div>
+            <div class="col-lg-4">
+              <h3>Sync</h3>
+              <p>Syllaview stores all your data in the cloud and syncs across all your devices!</p>
+            </div>
+            <div id="features" class="col-lg-2">
+              <img src="https://img.icons8.com/ios-glyphs/120/000000/checkmark.png">
+            </div>
+            <div class="col-lg-4">
+              <h3>Tasks</h3>
+              <p>Manage exams, classes, and deadlines.</p>
+            </div>
+          </div>
+      </div>
+    </div> <!-- /container -->
+    <div id="Account" class="jumbotron">
+
+
         <div class="file-upload-wrapper">
             <input type="file" id="input-file-now-custom-1" class="file-upload" data-default-file="https://mdbootstrap.com/img/Photos/Others/images/89.jpg" />
         </div>
     </div>
+
+
     {% block footer %}
     <footer>
             <p>&copy; RCOS</p>
