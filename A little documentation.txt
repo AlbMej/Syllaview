@@ -1,0 +1,44 @@
+People who worked on this:
+David Mejia [mejiad2@rpi.edu]
+Myron Rios
+Alberto Mejia
+
+Technology version:
+	Django 2
+	Python 3
+	BootStrap 3.x.x
+	SQLite 3
+	Any virtual environment and pip
+	A shell to run commands such as Cygwin
+
+Website template take from: 
+	https://github.com/arocks/edge
+
+Details about testing:
+	The current version can be found at https://github.com/AlbMej/Syllaview
+	The OS all of our team used for this projects was various versions of Windows
+	The website was tested primarily on the latest versions of Google Chrome and Firefox
+	Over the various versions of our website, out team ran some user testing
+		This included surveying individuals on what they thought on the website
+			This survey included usability, aesthetics, and more
+	We created some manual tests for the website to see if registeration works, but as we
+	tried to complete more tasks, the tests broke and we did not have time to rollback so
+	we decided against including the tests in the git repository as it would confuse
+	future workers as they do not currently work
+	To run the website, a laptop with recent specs is needed, as one of our members was not
+	able to work on the website on a consistent basis due to their older laptop (i3 processor)
+
+Details on running:
+	Details are for windows users:
+		Create a virtual environment EX. [python -m venv py34env]
+		Make sure your pip is up to date (or dont) and install djano
+		create a new project using the template feature of django-admin or pull from git repo
+		Go into the project directory and install from requirements.txt
+		Migrate and create a superuser for the project using django
+		Runserver and see if it all works
+	There are instructions for linux on https://django-edge.readthedocs.io/en/latest/#quick-start
+		but all of the project workers used windows so we can not confirm if it works. 
+	
+Known issues:
+	There is code available for the calendar and the sidebar for the weekly user view. These features work seperately, but in conjunction they do not. We are not sure why, but we believe that it is a common issue with bootstrap and it not behaving well with multiple dynamic objects. 
+	We are still trying to figure out a nice way to store the calendar data. A database was the first idea that came to mind, but the scaling of this database for a number of users has made the backend team question if they are building the correct solution. This would lead to partitioning the databases into different pieces, and that's a whole other issues to deal with if it comes to it. Another idea was an XML datatype, but the backend team (1 person), did not have much experience with using and converting data in an XML format. 
