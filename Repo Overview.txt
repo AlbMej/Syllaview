@@ -1,0 +1,7 @@
+UX/UI Design:	
+	Contains our teams wireframe mockups made for the website, empathy maps which we used to get an idea of what our users would want as key features/functionality, journey map to understand how are users are interating with us both on and off our website, personas to fill in the role of a user in our journey/empathy maps and some quantitative research our team conducted on individuals outisde of our team. This research was primarily for understanding the interest level in our website. 
+
+my_proj:
+	Contains the code for the website. Includes an SQLite database, Django infrastruture and BootStrap front-end. There is a ReadMe with more information on the specific versions. A pip file is also located there for easy installation of the dependencies. Going deeper into the file structure into templates, this folder contains the code for the displayed pages on the website. The home, about, navbar, registeration etc are held in this folder. There is also functionality for a user to reset, change, and recieve confirmation of modifications to their passwords. There are also folders containing the various media for our website such as static images. The manage.py file is the important file there as you execute and run the website 
+
+The remaining files contain additional documentation for the code base, verious licensing information, another ReadMe with our websites purpose, and our presentation for this project. 
