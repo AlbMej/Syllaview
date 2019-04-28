@@ -3,5 +3,8 @@ UX/UI Design:
 
 my_proj:
 	Contains the code for the website. Includes an SQLite database, Django infrastruture and BootStrap front-end. There is a ReadMe with more information on the specific versions. A pip file is also located there for easy installation of the dependencies. Going deeper into the file structure into templates, this folder contains the code for the displayed pages on the website. The home, about, navbar, registeration etc are held in this folder. There is also functionality for a user to reset, change, and recieve confirmation of modifications to their passwords. There are also folders containing the various media for our website such as static images. The manage.py file is the important file there as you execute and run the website 
+	
+Syllabus Event Extraction for Google Calendar:
+	Algorithms for parsing syllabuses. Found at https://github.com/AlbMej/Natural-Language-Processing/tree/master/Syllabus%20Event%20Extraction%20for%20Google%20Calendar
 
 The remaining files contain additional documentation for the code base, verious licensing information, another ReadMe with our websites purpose, and our presentation for this project. 
